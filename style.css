@@ -82,3 +82,14 @@
 .site .news-grid .news-card .story-title-button{overflow-wrap:normal;word-break:normal;line-height:1.55}
 .site .news-grid .news-card .story-content p{overflow-wrap:break-word;line-height:1.8}
 @media(max-width:750px){.site.desktop .news-grid,.site.desktop .preview-row .news-grid{grid-template-columns:1fr!important}.site.desktop .news-grid .news-card,.site.desktop .preview-row .news-grid .news-card{grid-column:1 / -1!important}.site.desktop .news-grid .news-card.lead-featured .story-content img{height:190px}}
+
+/* 1.3.2: prevent narrow editor preview and force lead story full row */
+.layout{grid-template-columns:minmax(260px,310px) minmax(0,1fr)}
+.layout>main{min-width:0;overflow:hidden}
+.site.desktop .preview-row .news-grid{grid-template-columns:repeat(var(--columns,3),minmax(0,1fr));min-width:0}
+.site.desktop .preview-row .news-card.lead-featured{grid-column:1/-1!important;width:100%;min-width:0}
+.site .news-card,.site .story-content,.site .story-title-button,.site .headline-link{min-width:0;max-width:100%;overflow-wrap:break-word;word-break:normal}
+.site .story-content img{max-width:100%;height:auto;max-height:290px;object-fit:cover}
+@media(max-width:1050px){.layout{grid-template-columns:1fr}.layout>aside{width:100%}.layout>main{width:100%}}
+@media(max-width:750px){.site.desktop .preview-row .news-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.site.desktop .preview-row .news-grid{grid-template-columns:1fr}.site.desktop .preview-row .news-card{grid-column:1/-1!important}}
