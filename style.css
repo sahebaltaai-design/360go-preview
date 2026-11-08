@@ -312,3 +312,9 @@
 .template-thumbnail1 .builder-template-story img{width:90px;height:65px}
 .template-text1 .builder-template-story img{display:none}
 @media(max-width:650px){.template-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.template-picker-dialog{padding:12px}.builder-template-content{grid-template-columns:1fr}.template-modern9{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* 1.4.10 clean visitor preview */
+.visitor-mode .visual-builder-heading,.visitor-mode .visual-row-toolbar,.visitor-mode .visual-block-toolbar{display:none!important}
+.visitor-mode .visual-edit-row{border:0!important;background:transparent!important;padding:0!important}
+.visitor-mode .news-card{outline:none!important}
+.visitor-mode .visitor-toolbar{display:flex!important;justify-content:space-between;align-items:center;gap:12px;margin:0 auto 12px;max-width:1200px;padding:8px 12px;background:#f0f5fb;border-radius:8px}
