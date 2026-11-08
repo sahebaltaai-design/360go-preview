@@ -194,3 +194,13 @@
 /* 1.4.1: independent coverage badge text and pulse colors */
 .site .news-card .coverage-badge{color:var(--coverage-text-color,#ffffff)}
 .site .news-card .coverage-pulse{background:var(--coverage-dot-color,#ffffff);box-shadow:0 0 0 3px color-mix(in srgb,var(--coverage-dot-color,#ffffff) 35%,transparent)}
+
+/* 1.4.2: user-selectable site canvas width; mobile preview remains 375px */
+.app:not(.visitor-mode) .site.desktop.site-width-current,.visitor-mode .site.desktop.site-width-current{width:100%!important;max-width:1200px!important;margin-inline:auto}
+.app:not(.visitor-mode) .site.desktop.site-width-wide,.visitor-mode .site.desktop.site-width-wide{width:100%!important;max-width:1400px!important;margin-inline:auto}
+.app:not(.visitor-mode) .site.desktop.site-width-compact,.visitor-mode .site.desktop.site-width-compact{width:100%!important;max-width:960px!important;margin-inline:auto}
+.app:not(.visitor-mode) .site.desktop.site-width-custom,.visitor-mode .site.desktop.site-width-custom{width:100%!important;max-width:var(--site-custom-width,1100px)!important;margin-inline:auto}
+.app:not(.visitor-mode) .site.desktop.site-width-full,.visitor-mode .site.desktop.site-width-full{width:100%!important;max-width:none!important;margin-inline:auto}
+.app:has(.site.desktop.site-width-full),.app:has(.site.desktop.site-width-wide){max-width:none!important}
+.visitor-mode .layout:has(.site.desktop.site-width-full),.visitor-mode .layout:has(.site.desktop.site-width-wide){max-width:none!important}
+.site.mobile{max-width:375px!important;width:100%!important;margin-inline:auto}
