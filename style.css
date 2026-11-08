@@ -93,3 +93,11 @@
 @media(max-width:1050px){.layout{grid-template-columns:1fr}.layout>aside{width:100%}.layout>main{width:100%}}
 @media(max-width:750px){.site.desktop .preview-row .news-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:520px){.site.desktop .preview-row .news-grid{grid-template-columns:1fr}.site.desktop .preview-row .news-card{grid-column:1/-1!important}}
+
+/* 1.3.3: settings is a fixed overlay, so never reserve an empty sidebar grid track */
+.app:not(.visitor-mode) .layout{display:block!important;width:100%;max-width:none}
+.app:not(.visitor-mode) .layout>main{display:block;width:100%;max-width:none;min-width:0;overflow:visible}
+.app:not(.visitor-mode) .layout>.settings-drawer.closed{display:none!important}
+.app:not(.visitor-mode) .site.desktop{width:100%;max-width:none}
+.app:not(.visitor-mode) .site.desktop .preview-row .news-grid{grid-template-columns:repeat(var(--columns,3),minmax(0,1fr))}
+@media(max-width:800px){.app:not(.visitor-mode) .site.desktop .preview-row .news-grid{grid-template-columns:1fr!important}.app:not(.visitor-mode) .site.desktop .preview-row .news-card{grid-column:1/-1!important}}
