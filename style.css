@@ -232,3 +232,16 @@
 .site.mobile .news-home-lower{grid-template-columns:1fr;gap:18px}
 .site.mobile .news-home-tile strong{font-size:13px}
 @media(max-width:650px){.site.desktop .news-home-feature,.site.desktop .news-home-secondary{grid-template-columns:repeat(2,minmax(0,1fr))}.site.desktop .news-home-feature .feature-0{grid-column:1/-1}.site.desktop .news-home-feature .news-home-tile{height:180px}.site.desktop .news-home-feature .feature-0{height:260px}.site.desktop .news-home-lower{grid-template-columns:1fr}}
+
+
+/* 1.4.5: configurable story count and arrangement per news group */
+.site .news-home-feature.layout-equal,.site .news-home-secondary.layout-equal{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+.site .news-home-feature.layout-two,.site .news-home-secondary.layout-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.site .news-home-feature.layout-three,.site .news-home-secondary.layout-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.site .news-home-feature.layout-hero,.site .news-home-secondary.layout-hero{grid-template-columns:2fr 1fr 1fr}
+.site .news-home-feature.layout-hero .feature-0,.site .news-home-secondary.layout-hero .news-home-tile:first-child{grid-column:auto}
+.site .news-home-secondary.layout-hero .news-home-tile:first-child{height:var(--grid-hero-height,330px)}
+.site .news-home-feature.layout-equal .news-home-tile,.site .news-home-feature.layout-two .news-home-tile,.site .news-home-feature.layout-three .news-home-tile{height:220px}
+@media(max-width:650px){.site.desktop .news-home-feature.layout-three,.site.desktop .news-home-secondary.layout-three,.site.desktop .news-home-feature.layout-hero,.site.desktop .news-home-secondary.layout-hero{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.site.mobile .news-home-feature.layout-three,.site.mobile .news-home-secondary.layout-three,.site.mobile .news-home-feature.layout-hero,.site.mobile .news-home-secondary.layout-hero{grid-template-columns:repeat(2,minmax(0,1fr))}
+.site.mobile .news-home-feature.layout-equal,.site.mobile .news-home-secondary.layout-equal{grid-template-columns:repeat(2,minmax(0,1fr))}
