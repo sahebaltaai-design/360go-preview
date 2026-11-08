@@ -126,3 +126,23 @@
 /* 1.3.5: settings panel docked to far right, no centered obstruction */
 .settings-drawer.modal{position:fixed!important;top:0!important;right:0!important;left:auto!important;bottom:0!important;inset:auto 0 0 auto!important;transform:none!important;width:min(410px,94vw)!important;height:100dvh!important;max-height:100dvh!important;border-radius:14px 0 0 14px!important;padding:14px!important;overflow-y:auto!important;box-shadow:-10px 0 35px rgba(15,23,42,.17)!important}
 @media(max-width:700px){.settings-drawer.modal{right:0!important;left:auto!important;width:min(370px,94vw)!important;max-height:100dvh!important}}
+
+/* 1.3.6: visitor main navigation slides from right on phone */
+.mobile-nav-shell{display:none}
+@media(max-width:700px){
+ .site .desktop-site-menu{display:none!important}
+ .site .menu-toggle{display:inline-flex;align-items:center;gap:6px}
+ .mobile-nav-shell{display:block;position:fixed;inset:0;z-index:1100;pointer-events:none;visibility:hidden}
+ .mobile-nav-shell.open{pointer-events:auto;visibility:visible}
+ .mobile-nav-backdrop{position:absolute;inset:0;width:100%;border:0;background:rgba(15,23,42,.4);opacity:0;transition:opacity .22s}
+ .mobile-nav-shell.open .mobile-nav-backdrop{opacity:1}
+ .mobile-nav-drawer{position:absolute;top:0;right:0;bottom:0;width:min(340px,88vw);background:#fff;overflow-y:auto;padding:18px 14px;box-shadow:-12px 0 40px #0003;transform:translateX(105%);transition:transform .22s ease}
+ .mobile-nav-shell.open .mobile-nav-drawer{transform:translateX(0)}
+ .mobile-nav-header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;padding:0 0 14px;margin-bottom:10px}
+ .mobile-nav-header button{background:#f1f5f9;border:0;border-radius:8px;padding:8px 12px}
+ .mobile-nav-drawer .site-menus,.mobile-nav-drawer .site-menus:not(.expanded){display:flex!important;flex-direction:column!important}
+ .mobile-nav-drawer .site-menu{display:flex;flex-direction:column;align-items:stretch;gap:4px;border:0}
+ .mobile-nav-drawer .menu-entry{display:flex;width:100%;flex-direction:column;align-items:stretch}
+ .mobile-nav-drawer .menu-nav-button{width:100%;text-align:right;display:flex;justify-content:space-between}
+ .mobile-nav-drawer .category-submenu{position:static;display:flex;flex-direction:column;width:100%}
+}
