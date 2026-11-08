@@ -22,3 +22,5 @@
 .headlines-only{display:flex;flex-direction:column}.headline-link{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:right;border:0;border-bottom:1px solid #e5e7eb;padding:12px 5px;background:transparent;color:#1f2937;font-size:14px;cursor:pointer}.headline-link:hover{color:var(--accent);background:#f8fafc}.headline-link:last-child{border-bottom:0}
 
 .site{font-family:var(--news-font);font-size:var(--news-size);font-weight:var(--news-weight);color:var(--news-color)}.site .story-title-button,.site .headline-link,.site .type-large strong{font-family:var(--heading-font);font-size:var(--heading-size);font-weight:var(--heading-weight)}.site h3,.site h4,.site .story-category{font-family:var(--heading-font);font-weight:var(--heading-weight)}.site .story-content p,.site .story-content small,.site .menu-link{font-family:var(--news-font);font-size:var(--news-size);font-weight:var(--news-weight);color:var(--news-color)}
+
+.site .site-menus .menu-link,.site .site-menus .menu-label{font-family:var(--menu-font);font-size:var(--menu-size);font-weight:var(--menu-weight);color:var(--menu-color)}
