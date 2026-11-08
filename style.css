@@ -190,3 +190,7 @@
 @media(prefers-reduced-motion:reduce){.site .news-card .coverage-pulse{animation:none}}
 .site .news-card .lead-template-overlay .coverage-badge{position:absolute;top:15px;right:15px;margin:0}
 .site .news-card .lead-template-image-right .coverage-badge,.site .news-card .lead-template-image-left .coverage-badge{grid-column:auto;grid-row:auto}
+
+/* 1.4.1: independent coverage badge text and pulse colors */
+.site .news-card .coverage-badge{color:var(--coverage-text-color,#ffffff)}
+.site .news-card .coverage-pulse{background:var(--coverage-dot-color,#ffffff);box-shadow:0 0 0 3px color-mix(in srgb,var(--coverage-dot-color,#ffffff) 35%,transparent)}
