@@ -44,3 +44,15 @@
 .category-subitem>.category-submenu{margin-inline-start:18px}
 .category-nav-link{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;min-width:140px}
 .menu-entry{vertical-align:top}
+
+/* Compact accordion navigation for the design studio settings */
+.settings-group{border:1px solid #dce3eb;border-radius:10px;margin:10px 0;background:#fff;overflow:hidden}
+.settings-group>summary{cursor:pointer;list-style:none;padding:12px 14px;font-weight:800;color:#243247;background:#f3f6fa;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.settings-group>summary::-webkit-details-marker{display:none}
+.settings-group>summary:after{content:"＋";font-size:17px;color:var(--accent,#2563eb)}
+.settings-group[open]>summary:after{content:"−"}
+.settings-group[open]>summary{border-bottom:1px solid #dce3eb}
+.settings-group>h3,.settings-group>p,.settings-group>label,.settings-group>.row-editor,.settings-group>.item,.settings-group>.editor{margin-left:12px;margin-right:12px}
+.settings-group>h3{margin-top:14px}
+.settings-group>.hint{margin-top:8px}
+.settings-group>.add-section{margin:10px 12px}
