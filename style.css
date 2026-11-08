@@ -258,3 +258,18 @@
 .site.mobile .news-home-layout.mobile-columns-2 .news-home-feature .feature-0{grid-column:1/-1}
 .site.mobile .news-home-layout.mobile-columns-2 .news-home-secondary .news-home-tile{height:160px}
 .site.mobile .news-home-layout.mobile-columns-1 .news-home-tile strong{font-size:17px}
+
+
+/* 1.4.7 visual homepage builder */
+.visual-builder-heading{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#eaf3ff;border:1px solid #b5d5ff;border-radius:8px;padding:12px;margin:14px 0;color:#16406b}
+.visual-builder-heading span{font-size:12px}
+.visual-builder-heading button,.visual-row-toolbar button,.visual-block-toolbar button{background:#fff;border:1px solid #c6d3e0;border-radius:5px;padding:6px 9px;color:#154c7d;cursor:pointer;font-size:12px}
+.visual-builder-heading button:hover,.visual-row-toolbar button:hover,.visual-block-toolbar button:hover{background:#d8eafa}
+.visual-edit-row{border:2px dashed #c4d4e4;border-radius:8px;background:#f7f9fc;padding:10px;margin-bottom:15px}
+.visual-row-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:5px;background:#e8eff6;padding:7px;margin:7px 0 10px;border-radius:5px}
+.visual-row-toolbar label{font-size:12px;display:flex;gap:4px;align-items:center}
+.visual-row-toolbar select{max-width:65px;padding:4px}
+.visual-block-toolbar{display:flex;gap:4px;flex-wrap:wrap;background:#e5effa;padding:5px;border-radius:5px;margin-bottom:8px}
+.visual-edit-row .news-card{outline:1px dashed #b8c7d8;outline-offset:-2px;padding:6px}
+.site.mobile .visual-row-toolbar,.site.mobile .visual-block-toolbar{gap:3px}
+.site.mobile .visual-row-toolbar button,.site.mobile .visual-block-toolbar button{font-size:10px;padding:4px}
