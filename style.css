@@ -162,3 +162,23 @@
 .site.mobile>.site-menus:first-child,.site.mobile>.site-menus:last-child{display:none!important}
 .visitor-mode .site.mobile .mobile-nav-drawer{display:block!important}
 .visitor-mode .site.mobile .mobile-nav-shell{display:block!important}
+
+/* 1.3.8: each news section has independent template, image height, title size */
+.site .news-card .story-content img{height:var(--section-image-height,290px);max-height:none;object-fit:cover}
+.site .news-card .story-content .story-title-button{font-size:var(--section-title-size,20px)}
+.site .news-card .lead-template-overlay{position:relative;min-height:240px;overflow:hidden;border-radius:9px;background:#172033;color:#fff;padding-bottom:15px}
+.site .news-card .lead-template-overlay img{height:var(--section-image-height,290px);filter:brightness(.45);margin:0}
+.site .news-card .lead-template-overlay .story-title-button{position:absolute;bottom:75px;right:16px;left:16px;color:#fff;text-shadow:0 2px 6px #000}
+.site .news-card .lead-template-overlay small{position:absolute;bottom:48px;right:16px;color:white!important}
+.site .news-card .lead-template-overlay p{display:none}
+.site .news-card .lead-template-overlay .read-details{position:absolute;bottom:9px;right:16px}
+.site .news-card .lead-template-image-right,.site .news-card .lead-template-image-left{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 15px;align-items:center}
+.site .news-card .lead-template-image-right img{grid-column:1;grid-row:1/5;margin:0}
+.site .news-card .lead-template-image-left img{grid-column:2;grid-row:1/5;margin:0}
+.site .news-card .lead-template-text-first{display:flex;flex-direction:column}
+.site .news-card .lead-template-text-first .story-title-button{order:0}
+.site .news-card .lead-template-text-first img{order:1}
+.site .news-card .lead-template-text-first small{order:2}
+.site .news-card .lead-template-text-first p{order:3}
+.site .news-card .lead-template-text-first .read-details{order:4}
+@media(max-width:700px){.site .news-card .lead-template-image-right,.site .news-card .lead-template-image-left{display:flex;flex-direction:column;align-items:stretch}}
