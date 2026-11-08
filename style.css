@@ -146,3 +146,19 @@
  .mobile-nav-drawer .menu-nav-button{width:100%;text-align:right;display:flex;justify-content:space-between}
  .mobile-nav-drawer .category-submenu{position:static;display:flex;flex-direction:column;width:100%}
 }
+
+/* 1.3.7: phone preview works on desktop, including visitor preview */
+.site.mobile .mobile-nav-shell{display:block!important;position:fixed!important;inset:0!important;z-index:9999!important;pointer-events:none;visibility:hidden}
+.site.mobile .mobile-nav-shell.open{pointer-events:auto;visibility:visible}
+.site.mobile .mobile-nav-shell .mobile-nav-backdrop{position:absolute;inset:0;width:100%;height:100%;background:rgba(15,23,42,.42);border:0;opacity:0;transition:opacity .2s}
+.site.mobile .mobile-nav-shell.open .mobile-nav-backdrop{opacity:1}
+.site.mobile .mobile-nav-shell .mobile-nav-drawer{display:block!important;position:absolute!important;top:0!important;right:0!important;left:auto!important;bottom:0!important;width:min(340px,88vw)!important;max-width:none!important;height:100dvh!important;overflow-y:auto!important;visibility:visible!important;background:#fff;padding:18px 14px;box-shadow:-12px 0 40px #0003;transform:translateX(105%);transition:transform .22s ease}
+.site.mobile .mobile-nav-shell.open .mobile-nav-drawer{transform:translateX(0)}
+.site.mobile .mobile-nav-drawer .site-menus,.site.mobile .mobile-nav-drawer .site-menus:not(.expanded){display:flex!important;flex-direction:column!important;gap:4px}
+.site.mobile .mobile-nav-drawer .site-menu{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:5px}
+.site.mobile .mobile-nav-drawer .menu-entry{display:flex;flex-direction:column;width:100%}
+.site.mobile .mobile-nav-drawer .menu-nav-button{width:100%;text-align:right;display:flex;justify-content:space-between}
+.site.mobile .desktop-site-menu{display:none!important}
+.site.mobile>.site-menus:first-child,.site.mobile>.site-menus:last-child{display:none!important}
+.visitor-mode .site.mobile .mobile-nav-drawer{display:block!important}
+.visitor-mode .site.mobile .mobile-nav-shell{display:block!important}
