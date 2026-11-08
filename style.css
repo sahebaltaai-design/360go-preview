@@ -56,3 +56,9 @@
 .settings-group>h3{margin-top:14px}
 .settings-group>.hint{margin-top:8px}
 .settings-group>.add-section{margin:10px 12px}
+
+.settings-panel{border:1px solid #cbd5e1;border-radius:12px;padding:8px;background:#fff;margin-bottom:14px}
+.settings-panel>summary{cursor:pointer;list-style:none;padding:13px 14px;border-radius:8px;background:#eaf0f7;color:#1e293b;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:space-between}
+.settings-panel>summary::-webkit-details-marker{display:none}
+.settings-panel>summary:after{content:"＋";font-size:20px;color:var(--accent,#2563eb)}
+.settings-panel[open]>summary:after{content:"−"}
