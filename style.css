@@ -334,3 +334,8 @@
 .site .preview-row .news-template-card .template-modern1 .item-0{grid-column:1;grid-row:1/span 3}
 .active-template-label{font-size:11px;color:#64748b;font-weight:400}
 @media(max-width:650px){.site .preview-row .news-template-card .template-modern4{grid-template-columns:repeat(2,minmax(0,1fr))}.site .preview-row .news-template-card .template-modern4 .item-0{grid-column:1/-1;grid-row:auto}.site .preview-row .news-template-card .template-modern4 .item-1,.site .preview-row .news-template-card .template-modern4 .item-2,.site .preview-row .news-template-card .template-modern4 .item-3,.site .preview-row .news-template-card .template-modern4 .item-4{grid-column:auto;grid-row:auto}.site .preview-row .news-template-card .template-modern1{grid-template-columns:1fr}.site .preview-row .news-template-card .template-modern1 .item-0{grid-column:auto;grid-row:auto}}
+
+/* v1.4.13: support five and six columns, honoring each row's independent selection */
+.site .news-grid .span-5{grid-column:span 5}
+.site .news-grid .span-6{grid-column:span 6}
+@media(max-width:800px){.site.mobile .news-grid .span-5,.site.mobile .news-grid .span-6{grid-column:1/-1!important}}
