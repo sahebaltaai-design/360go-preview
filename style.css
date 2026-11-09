@@ -366,3 +366,26 @@
   .site .preview-row .news-grid .news-card{grid-column:1/-1!important}
   .site .preview-row .news-card .story-content img{aspect-ratio:16/9}
 }
+
+/* 360GO v1.4.15 — WPBakery-style independently editable columns */
+.builder-slot-grid{
+ display:grid;grid-template-columns:repeat(var(--builder-cols,4),minmax(0,1fr));
+ gap:clamp(7px,1.4vw,20px);direction:rtl;margin:10px 0 16px;
+}
+.builder-slot{min-width:0;background:#f1f1f1;padding:7px 9px 12px;min-height:108px;box-sizing:border-box}
+.builder-slot-actions{display:flex;justify-content:center;align-items:center;gap:7px;min-height:22px}
+.builder-slot-actions button{padding:0 3px;border:0;background:transparent;color:#87939c;font-size:18px;cursor:pointer}
+.builder-slot-actions button:disabled{opacity:.45;cursor:default}
+.builder-slot-add{
+ display:flex;align-items:center;justify-content:center;box-sizing:border-box;
+ min-height:60px;width:100%;margin:3px 0 0;background:#f7f7f7;
+ border:1px dashed #e2e2e2;color:#8293a2;font-size:34px;
+ cursor:pointer;transition:background .15s,border-color .15s;
+}
+.builder-slot-add:hover{background:#fff;border-color:#8bb6d9}
+.builder-slot-label{font-size:12px;line-height:1.5;color:#435468;overflow-wrap:anywhere}
+.builder-slot-label small{display:block;font-size:11px;color:#7c8fa3}
+@media(max-width:750px){
+ .builder-slot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+}
+@media(max-width:430px){.builder-slot-grid{grid-template-columns:1fr}}
