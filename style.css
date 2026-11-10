@@ -676,3 +676,19 @@
 .site .preview-row .news-template-card .builder-template-content.inner-preset.template-text1 .builder-template-story{padding:12px;border:0;border-bottom:1px solid #e1e5eb;border-radius:0}
 .schematic-modern1{grid-template-rows:repeat(3,1fr)}.schematic-modern4{grid-template-rows:repeat(4,1fr)}.schematic-modern4 i:first-child{grid-row:1/span 4}.schematic-mix1 i:first-child{grid-column:2;grid-row:1/span 3}.schematic-mix1 i:not(:first-child){grid-column:1}
 @container(max-width:300px){.site .preview-row .news-template-card .builder-template-content.inner-preset.template-modern9{grid-template-columns:repeat(2,minmax(0,1fr))!important}.site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child){flex-direction:column}.site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child) img{width:100%!important;flex:none;height:70px!important}}
+
+/* v1.4.28 — phone rows must not create implicit desktop slot columns. */
+.site.mobile .preview-row .news-grid{display:flex!important;flex-direction:column;gap:14px;width:100%;min-width:0}
+.site.mobile .preview-row .news-grid>.news-card{width:100%!important;max-width:100%!important;min-width:0;grid-column:auto!important}
+@media(max-width:600px){
+ .site.desktop .preview-row .news-grid{display:flex!important;flex-direction:column;gap:14px;width:100%;min-width:0}
+ .site.desktop .preview-row .news-grid>.news-card{width:100%!important;max-width:100%!important;min-width:0;grid-column:auto!important}
+}
+/* A hero above a compact list keeps the preset readable in narrow containers. */
+@container(max-width:480px){
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1){grid-template-columns:minmax(0,1fr)!important;grid-auto-rows:auto}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:first-child{grid-column:1/-1!important;grid-row:auto!important;min-height:220px;height:220px}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child){grid-column:1/-1!important;grid-row:auto!important;flex-direction:row!important;min-height:88px}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child) img{width:36%!important;max-width:36%!important;flex:0 0 36%!important;height:88px!important}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story strong{font-size:14px;line-height:1.7}
+}
