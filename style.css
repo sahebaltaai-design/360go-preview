@@ -494,3 +494,22 @@
 @media(max-width:700px){
   .site .builder-slot .builder-template-content.inner-grid{grid-template-columns:repeat(min(2,var(--inner-cols,1)),minmax(0,1fr))!important}
 }
+
+/* v1.4.21 — Blog 1: same side-by-side arrangement, uniform thumbnail dimensions */
+.site .preview-row .template-blog1 .builder-template-story,
+.site .builder-slot .template-blog1 .builder-template-story{
+  display:flex!important;flex-direction:row!important;align-items:stretch;
+  min-width:0;overflow:hidden;
+}
+.site .preview-row .template-blog1 .builder-template-story img,
+.site .builder-slot .template-blog1 .builder-template-story img{
+  display:block!important;flex:0 0 42%!important;
+  width:42%!important;min-width:42%!important;max-width:42%!important;
+  height:108px!important;min-height:108px!important;max-height:108px!important;
+  aspect-ratio:auto!important;object-fit:cover!important;object-position:center!important;
+  border-radius:0!important;margin:0!important;
+}
+.site .preview-row .template-blog1 .builder-template-story span,
+.site .builder-slot .template-blog1 .builder-template-story span{
+  flex:1 1 0;min-width:0;max-width:58%;overflow-wrap:anywhere;padding:7px;
+}
