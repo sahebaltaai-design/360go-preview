@@ -728,3 +728,25 @@
 .section-heading.heading-style-capsule .section-heading-text{border-radius:100px;border:1px solid var(--section-marker-color)}
 .section-heading.heading-style-banner .section-heading-text{border-inline-start:5px solid var(--section-marker-color);border-radius:3px}
 .section-heading.heading-style-dashed-frame .section-heading-text{border:2px dashed var(--section-marker-color);border-radius:5px}
+
+/* v1.4.33 — photo reference: one double-width hero, two side cards, four below. */
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:var(--photo-top-height,360px) var(--photo-bottom-height,190px)!important;grid-auto-rows:var(--photo-bottom-height,190px);gap:16px;direction:rtl}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story{position:relative;display:block!important;grid-column:auto!important;grid-row:auto!important;min-width:0;min-height:0;height:100%;padding:0;border:0;border-radius:16px;overflow:hidden;background:#26333e;isolation:isolate}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story:first-child{grid-column:span 2!important}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story img{position:absolute;inset:0;display:block;width:100%!important;height:100%!important;max-height:none!important;aspect-ratio:auto!important;object-fit:cover;object-position:center}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story>span:not(.photo-news-category){position:absolute;inset:auto 0 0;display:flex;flex-direction:column;gap:4px;width:100%;padding:40px 14px 14px;background:linear-gradient(transparent,rgba(0,0,0,.94));z-index:1}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story :is(strong,small,em){color:#fff!important;line-height:1.45}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story strong{font-size:clamp(15px,1.65cqi,22px);font-weight:800;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story:first-child strong{font-size:clamp(19px,2.1cqi,28px)}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story>.photo-news-category{position:absolute;inset-block-start:5px;inset-inline-start:5px;z-index:2;display:block;max-width:calc(100% - 10px);padding:4px 8px;border-radius:10px 10px 0 0;background:var(--category-badge-color,#c40000);color:#fff;font-size:12px;font-weight:700;line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+.expanded-schematic.layout-hero-seven{grid-template-columns:repeat(4,1fr);grid-template-rows:2fr 1fr;grid-auto-rows:1fr;direction:rtl}
+.expanded-schematic.layout-hero-seven i:first-child{grid-column:span 2}
+.expanded-schematic.layout-hero-seven i{background:linear-gradient(#9eb7cf 55%,#1d2e40)}
+@container(max-width:700px){
+ .site .preview-row .news-template-card .expanded-template.inner-hero-seven{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:240px!important;grid-auto-rows:180px;gap:10px}
+ .site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story:first-child{grid-column:1/-1!important}
+ .site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story strong{font-size:15px}
+ .site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story:first-child strong{font-size:21px}
+ .site .preview-row .news-template-card .expanded-template.inner-hero-seven .builder-template-story>span:not(.photo-news-category){padding:35px 10px 10px}
+}
