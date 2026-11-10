@@ -684,11 +684,13 @@
  .site.desktop .preview-row .news-grid{display:flex!important;flex-direction:column;gap:14px;width:100%;min-width:0}
  .site.desktop .preview-row .news-grid>.news-card{width:100%!important;max-width:100%!important;min-width:0;grid-column:auto!important}
 }
-/* A hero above a compact list keeps the preset readable in narrow containers. */
+/* v1.4.29 — retain the preset geometry inside narrow desktop and phone columns. */
 @container(max-width:480px){
- .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1){grid-template-columns:minmax(0,1fr)!important;grid-auto-rows:auto}
- .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:first-child{grid-column:1/-1!important;grid-row:auto!important;min-height:220px;height:220px}
- .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child){grid-column:1/-1!important;grid-row:auto!important;flex-direction:row!important;min-height:88px}
- .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child) img{width:36%!important;max-width:36%!important;flex:0 0 36%!important;height:88px!important}
- .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story strong{font-size:14px;line-height:1.7}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1){grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:minmax(88px,auto);gap:8px}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:first-child{height:auto;min-height:220px}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child){flex-direction:column!important;min-height:88px}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child) img{width:100%!important;max-width:100%!important;flex:none!important;height:65px!important}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story:not(:first-child)>span{width:100%;padding:6px}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story strong{font-size:12px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+ .site .preview-row .news-template-card .builder-template-content.inner-preset:is(.template-modern1,.template-modern4,.template-mix1) .builder-template-story small{font-size:9px}
 }
