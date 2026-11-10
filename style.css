@@ -432,3 +432,16 @@
 .builder-inline-settings label{display:grid;gap:3px;color:#435569;font-size:11px;line-height:1.4}
 .builder-inline-settings select,.builder-inline-settings input{width:100%;min-width:0;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:4px;background:#fff;padding:5px;font:inherit;color:#273445}
 .builder-inline-settings input{max-width:100%}
+
+/* v1.4.18 — content is displayed within its own WPBakery-style slot */
+.builder-slot>.news-card{display:block;width:100%!important;max-width:100%!important;min-width:0;grid-column:auto!important;margin:8px 0;box-sizing:border-box}
+.site .builder-slot .news-template-card{width:100%!important;max-width:100%!important;grid-column:auto!important}
+.site .builder-slot .news-template-card .builder-template-content{max-width:100%;width:100%;min-width:0}
+.site .builder-slot .news-template-card .builder-template-story{max-width:100%;min-width:0}
+.site .builder-slot .news-template-card .builder-template-story img,
+.site .builder-slot .news-card .story-content img{display:block;width:100%;max-width:100%;height:auto!important;aspect-ratio:16/10;object-fit:cover}
+.site .builder-slot .news-card .story-title-button{overflow-wrap:anywhere;max-width:100%}
+.site .builder-slot .news-card.lead-featured{grid-column:auto!important}
+.site .builder-slot .news-card.lead-featured .story-content img{height:auto!important;aspect-ratio:16/9}
+.site .builder-slot .news-card .story-content{max-width:100%;min-width:0}
+.site .builder-slot .news-template-card .builder-template-content.inner-grid{grid-template-columns:repeat(var(--inner-cols,1),minmax(0,1fr))!important}
