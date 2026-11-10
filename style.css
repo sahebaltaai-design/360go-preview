@@ -389,3 +389,40 @@
  .builder-slot-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
 }
 @media(max-width:430px){.builder-slot-grid{grid-template-columns:1fr}}
+
+/* v1.4.16: Each editorial square manages its own news distribution */
+.column-distribution-settings{padding:12px;margin:12px 0;border:1px solid #d5e0eb;background:#f7fafd;border-radius:9px}
+.column-distribution-settings label{display:block;margin:10px 0}
+.site .preview-row .news-grid .news-template-card[style*="grid-column"]{width:auto!important;max-width:100%!important;min-width:0}
+.site .preview-row .news-template-card .builder-template-content.inner-stack{
+ display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:9px;
+}
+.site .preview-row .news-template-card .builder-template-content.inner-grid{
+ display:grid!important;grid-template-columns:repeat(var(--inner-cols,1),minmax(0,1fr))!important;gap:8px;
+}
+.site .preview-row .news-template-card .builder-template-content.inner-feature{
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px;
+}
+.site .preview-row .news-template-card .builder-template-content.inner-feature .builder-template-story:first-child{
+ grid-column:1 / -1!important;grid-row:auto!important
+}
+.site .preview-row .news-template-card .builder-template-content.inner-titles{
+ display:flex!important;flex-direction:column;gap:0;
+}
+.site .preview-row .news-template-card .builder-template-content.inner-titles .builder-template-story{
+ display:block!important;grid-column:auto!important;grid-row:auto!important;
+ border:0;border-bottom:1px solid #e5e7eb;padding:9px 5px;
+}
+.site .preview-row .news-template-card .builder-template-content.inner-grid .builder-template-story,
+.site .preview-row .news-template-card .builder-template-content.inner-stack .builder-template-story,
+.site .preview-row .news-template-card .builder-template-content.inner-feature .builder-template-story{
+ grid-column:auto!important;grid-row:auto!important;min-width:0
+}
+.site .preview-row .news-template-card .builder-template-content.inner-grid .builder-template-story img,
+.site .preview-row .news-template-card .builder-template-content.inner-stack .builder-template-story img,
+.site .preview-row .news-template-card .builder-template-content.inner-feature .builder-template-story img{
+ width:100%;height:auto!important;aspect-ratio:16/10;object-fit:cover;
+}
+@media(max-width:480px){
+ .site .preview-row .news-template-card .builder-template-content.inner-grid{grid-template-columns:repeat(min(2,var(--inner-cols,1)),minmax(0,1fr))!important}
+}
