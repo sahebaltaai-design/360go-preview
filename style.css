@@ -776,3 +776,44 @@
 .site.desktop .preview-row .news-grid > .news-card.full-width-block {
   grid-column: 1 / -1 !important;
 }
+
+/* A section band shares the page background while its cards follow the site grid. */
+.site .news-card.section-background-band {
+  background: var(--section-background-color, transparent)
+    var(--section-background-image, none) center / cover no-repeat;
+  padding-block: 24px;
+}
+
+.app.visitor-mode:has(.section-background-band) {
+  max-width: none;
+  padding-inline: 0;
+  overflow-x: clip;
+}
+
+.visitor-mode:has(.section-background-band) .layout > main,
+.visitor-mode .site:has(.section-background-band) {
+  background: transparent;
+  border-color: transparent;
+  overflow: visible;
+}
+
+.visitor-mode .site .preview-row .news-card.section-background-band {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  background: transparent;
+  border-color: transparent;
+}
+
+.visitor-mode .site .preview-row .news-card.section-background-band::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  inset-inline-start: 50%;
+  inline-size: 100vw;
+  translate: 50% 0;
+  background: var(--section-background-color, transparent)
+    var(--section-background-image, none) center / cover no-repeat;
+  pointer-events: none;
+}
