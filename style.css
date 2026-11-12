@@ -822,3 +822,12 @@
     var(--section-background-image, none) center / cover no-repeat;
   pointer-events: none;
 }
+
+.app:not(.visitor-mode) .layout > main > .site {
+  background-color: var(--page-background);
+}
+
+.visitor-page {
+  min-height: 100vh;
+  background-color: var(--page-background);
+}
