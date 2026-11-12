@@ -790,10 +790,15 @@
   overflow-x: clip;
 }
 
+.layout > main > .site,
+.visitor-mode .layout > main {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
 .visitor-mode:has(.section-background-band) .layout > main,
 .visitor-mode .site:has(.section-background-band) {
-  background: transparent;
-  border-color: transparent;
   overflow: visible;
 }
 
